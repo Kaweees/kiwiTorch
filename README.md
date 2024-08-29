@@ -1,20 +1,11 @@
-# Graphics Demo
-
-<!-- PROJECT PREVIEW -->
-## Preview
-<p align="center">
-  <img src="images/graphics.png"
-  width = "80%"
-  alt = "Current capabilities of the raytracer."
-  />
-</p>
+# kiwitorch
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 ### Prerequisites
 
-Before attempting to build this project, make sure you have [GNU Make](https://www.gnu.org/software/make/), [CMake](https://cmake.org) and [ImageMagick](https://imagemagick.org/index.php) installed on your machine.
+Before attempting to build this project, make sure you have [GNU Make](https://www.gnu.org/software/make/), and [CMake](https://cmake.org) installed on your machine.
 
 ### Installation
 
@@ -22,14 +13,10 @@ To get a local copy of the project up and running on your machine, follow these 
 
 1. Clone the project repository
    ```sh
-   git clone https://github.com/Kaweees/graphics.git
-   cd graphics
+   git clone https://github.com/Kaweees/kiwitorch.git
+   cd kiwitorch
    ```
-2. Build the project and generate a PPM file
+2. Build the project and exe
    ```sh
-   clear && cmake CMakeLists.txt && make && ./graphics > ./images/graphics.ppm
-   ```
-3. Convert the generated PPM file to a PNG file
-   ```sh
-   magick ./images/graphics.ppm ./images/graphics.png
+   clear && cmake CMakeLists.txt && make && ./target/release/kiwitorch
    ```
