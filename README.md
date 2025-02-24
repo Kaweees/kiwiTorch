@@ -71,8 +71,6 @@ To get a local copy of the project up and running on your machine, follow these 
 kiwiTorch/
 ├── .github/                       - GitHub Actions CI/CD workflows
 ├── scripts/                       - Standalone scripts
-├── shared/
-│   └── utils/                     - Shared utility functions
 ├── src/                           - Project packages
 │   ├── kiwitorch/                      - kiwitorch application logic
 │   └── ...                        - Other packages
