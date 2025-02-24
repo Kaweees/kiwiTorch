@@ -60,6 +60,6 @@ jobs:
         if: ${{ matrix.python-version == '3.11' }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: Kaweees/modern-python
+          slug: Kaweees/kiwiTorch
       - name: Run type checks
         run: just check

@@ -14,17 +14,17 @@
 
 </div>
 
-<a href="https://github.com/Kaweees/modern-python">
+<a href="https://github.com/Kaweees/kiwiTorch">
   <img alt="Python Logo" src="assets/img/python.png" align="right" width="150">
 </a>
 
 <div align="left">
-  <h1><em><a href="https://miguelvf.dev/blog/dotfiles/compendium">~modern-python</a></em></h1>
+  <h1><em><a href="https://miguelvf.dev/blog/dotfiles/compendium">~kiwiTorch</a></em></h1>
 </div>
 
 <!-- ABOUT THE PROJECT -->
 
-A template for developing production-ready Python applications.
+A pytorch implementation written in Python.
 
 ### Built With
 
@@ -47,8 +47,8 @@ To get a local copy of the project up and running on your machine, follow these 
 1. Clone the project repository
 
    ```sh
-   git clone https://github.com/Kaweees/modern-python.git
-   cd modern-python
+   git clone https://github.com/Kaweees/kiwiTorch.git
+   cd kiwiTorch
    ```
 
 2. Install the virtual environment and pre-commit hooks
@@ -68,13 +68,13 @@ To get a local copy of the project up and running on your machine, follow these 
 ## Project Structure
 
 ```sh
-modern-python/
+kiwiTorch/
 ├── .github/                       - GitHub Actions CI/CD workflows
 ├── scripts/                       - Standalone scripts
 ├── shared/
 │   └── utils/                     - Shared utility functions
 ├── src/                           - Project packages
-│   ├── core/                      - Core application logic
+│   ├── kiwitorch/                      - kiwitorch application logic
 │   └── ...                        - Other packages
 ├── tests/                         - Project tests (mirrors the main project structure)
 ├── LICENSE                        - Project license
@@ -88,12 +88,12 @@ The source code for this project is distributed under the terms of the MIT Licen
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Kaweees/modern-python.svg?style=for-the-badge
-[contributors-url]: https://github.com/Kaweees/modern-python/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Kaweees/modern-python.svg?style=for-the-badge
-[forks-url]: https://github.com/Kaweees/modern-python/network/members
-[stars-shield]: https://img.shields.io/github/stars/Kaweees/modern-python.svg?style=for-the-badge
-[stars-url]: https://github.com/Kaweees/modern-python/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/Kaweees/kiwiTorch.svg?style=for-the-badge
+[contributors-url]: https://github.com/Kaweees/kiwiTorch/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Kaweees/kiwiTorch.svg?style=for-the-badge
+[forks-url]: https://github.com/Kaweees/kiwiTorch/network/members
+[stars-shield]: https://img.shields.io/github/stars/Kaweees/kiwiTorch.svg?style=for-the-badge
+[stars-url]: https://github.com/Kaweees/kiwiTorch/stargazers
 
 <!-- MARKDOWN SHIELD BAGDES & LINKS -->
 <!-- https://github.com/Ileriayo/markdown-badges -->

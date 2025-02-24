@@ -1,11 +1,11 @@
 FROM python:3.11.9-slim-bookworm
-ARG PACKAGE="core"
+ARG PACKAGE="kiwitorch"
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
 WORKDIR /app
 
-# Copy separately as it's a dependency for packages in core
+# Copy separately as it's a dependency for packages in kiwitorch
 COPY shared/utils /app/shared/utils
 
 RUN --mount=type=bind,source=uv.lock,target=uv.lock \

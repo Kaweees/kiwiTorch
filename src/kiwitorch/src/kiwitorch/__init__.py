@@ -2,7 +2,7 @@ from utils import return_one
 
 
 def hello():
-    print("Hello from core pkg")
+    print("Hello from kiwitorch pkg")
 
 
 def return_two() -> int:

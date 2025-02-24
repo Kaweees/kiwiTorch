@@ -1,4 +1,4 @@
-from core import return_two
+from kiwitorch import return_two
 
 
 def test_return_two():

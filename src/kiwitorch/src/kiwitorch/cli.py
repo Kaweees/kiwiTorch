@@ -1,6 +1,6 @@
 import typer
 
-from core import return_two
+from kiwitorch import return_two
 
 app = typer.Typer()
 
