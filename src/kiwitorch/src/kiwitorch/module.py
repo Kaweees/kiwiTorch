@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Any, Dict, Optional, Sequence, Tuple
+from collections.abc import Sequence
+from typing import Any, Optional
 
 
 class Module:
@@ -15,8 +16,8 @@ class Module:
 
     """
 
-    _modules: Dict[str, Module]
-    _parameters: Dict[str, Parameter]
+    _modules: dict[str, Module]
+    _parameters: dict[str, Parameter]
     training: bool
 
     def __init__(self) -> None:
@@ -26,7 +27,7 @@ class Module:
 
     def modules(self) -> Sequence[Module]:
         """Return the direct child modules of this module."""
-        m: Dict[str, Module] = self.__dict__["_modules"]
+        m: dict[str, Module] = self.__dict__["_modules"]
         return list(m.values())
 
     def train(self) -> None:
@@ -39,7 +40,7 @@ class Module:
         # TODO: Implement for Task 0.4.
         raise NotImplementedError("Need to implement for Task 0.4")
 
-    def named_parameters(self) -> Sequence[Tuple[str, Parameter]]:
+    def named_parameters(self) -> Sequence[tuple[str, Parameter]]:
         """Collect all the parameters of this module and its descendents.
 
         Returns

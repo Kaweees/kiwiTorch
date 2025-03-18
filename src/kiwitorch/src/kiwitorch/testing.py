@@ -1,6 +1,7 @@
 # type: ignore
 
-from typing import Callable, Generic, Iterable, Tuple, TypeVar
+from collections.abc import Iterable
+from typing import Callable, Generic, TypeVar
 
 import kiwitorch.utils.operators as operators
 
@@ -125,10 +126,10 @@ class MathTest(Generic[A]):
     @classmethod
     def _tests(
         cls,
-    ) -> Tuple[
-        Tuple[str, Callable[[A], A]],
-        Tuple[str, Callable[[A, A], A]],
-        Tuple[str, Callable[[Iterable[A]], A]],
+    ) -> tuple[
+        tuple[str, Callable[[A], A]],
+        tuple[str, Callable[[A, A], A]],
+        tuple[str, Callable[[Iterable[A]], A]],
     ]:
         """
         Returns a list of all the math tests.
@@ -211,4 +212,3 @@ class MathTestVariable(MathTest):
     @staticmethod
     def complex(a):
         return (((a * 10 + 7).relu() * 6 + 5).relu() * 10).sigmoid().log() / 50
-

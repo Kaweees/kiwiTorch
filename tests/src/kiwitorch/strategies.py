@@ -3,7 +3,6 @@ from hypothesis.strategies import floats, integers
 
 import kiwitorch
 
-
 settings.register_profile("ci", deadline=None)
 settings.load_profile("ci")
 
@@ -14,4 +13,4 @@ med_ints = integers(min_value=1, max_value=20)
 
 
 def assert_close(a: float, b: float) -> None:
-    assert kiwitorch.operators.is_close(a, b), "Failure x=%f y=%f" % (a, b)
+    assert kiwitorch.operators.is_close(a, b), f"Failure x={a:f} y={b:f}"
