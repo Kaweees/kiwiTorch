@@ -2,11 +2,16 @@
 KiwiTorch - A lightweight deep learning framework
 """
 
-from kiwitorch.module import Module
-from kiwitorch.scalar import Scalar
-from kiwitorch.tensor import Tensor
-from kiwitorch.testing import MathTest, MathTestVariable
-from kiwitorch.utils import operators as operators
+from kiwitorch.module import Module  # noqa: F401,F403
+from kiwitorch.scalar import Scalar  # noqa: F401,F403
+from kiwitorch.tensor import Tensor  # noqa: F401,F403
+
+# Import specific classes from testing module
+from kiwitorch.testing import (  # type: ignore # noqa: F401,F403
+    MathTest,
+    MathTestVariable,
+)
+from kiwitorch.utils import operators as operators  # noqa: F401,F403
 
 __all__ = [
     "Tensor",
