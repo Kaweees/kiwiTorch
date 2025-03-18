@@ -11,3 +11,9 @@ class Scalar:
         if not self.requires_grad:
             return
         self.grad = 1.0
+
+    def __add__(self, other):
+        return Scalar(self.data + other.data)
+
+    def __mul__(self, other):
+        return Scalar(self.data * other.data)

@@ -1,16 +1,17 @@
 [project]
-name = "kiwitorch"
-version = "0.0.1"
-description = "A template for developing production-ready Python applications."
+name = "kiwitorch-monorepo"
+version = "0.0.0"
+description = "A minimal Python implementation of the Torch API"
 authors = [
     { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
 ]
 requires-python = ">=3.10"
 readme = "README.md"
-dependencies = ["hypothesis>=6.129.4", "kiwitorch", "typer>=0.12.5"]
+license = { file = "LICENSE" }
+
+dependencies = ["hypothesis>=6.129.4", "typer>=0.12.5"]
 
 [tool.uv.sources]
-utils = { workspace = true }
 kiwitorch = { workspace = true }
 
 [tool.uv.workspace]
@@ -26,8 +27,6 @@ dev-dependencies = [
     "deptry>=0.23.0",
     "mypy>=1.15.0",
     "pytest-cov>=6.0.0",
-    "utils",
-    "kiwitorch",
 ]
 package = false
 

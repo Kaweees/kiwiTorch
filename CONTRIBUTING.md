@@ -1,4 +1,4 @@
-# Contributing to `modern-python`
+# Contributing to `kiwitorch`
 
 Contributions are welcome, and they are greatly appreciated!
 Every little bit helps, and credit will always be given.
@@ -29,7 +29,7 @@ Anything tagged with "enhancement" and "help wanted" is open to whoever wants to
 
 ## Write Documentation
 
-modern-python could always use more documentation, whether as part of the official docs, in docstrings, or even on the web in blog posts, articles, and such.
+kiwitorch could always use more documentation, whether as part of the official docs, in docstrings, or even on the web in blog posts, articles, and such.
 
 ## Submit Feedback
 
@@ -44,22 +44,22 @@ If you are proposing a new feature:
 
 # Get Started!
 
-Ready to contribute? Here's how to set up `modern-python` for local development.
+Ready to contribute? Here's how to set up `kiwitorch` for local development.
 Please note this documentation assumes you already have `uv` and `Git` installed and ready to go.
 
-1. Fork the `modern-python` repo on GitHub.
+1. Fork the `kiwitorch` repo on GitHub.
 
 2. Clone your fork locally:
 
 ```bash
 cd <directory_in_which_repo_should_be_created>
-git clone git@github.com:YOUR_NAME/modern-python.git
+git clone git@github.com:YOUR_NAME/kiwitorch.git
 ```
 
 3. Now we need to install the environment. Navigate into the directory
 
 ```bash
-cd modern-python
+cd kiwitorch
 ```
 
 Then, install and activate the environment with:
