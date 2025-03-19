@@ -3,7 +3,7 @@
 from collections.abc import Iterable
 from typing import Callable, Generic, TypeVar
 
-import kiwitorch.utils.operators as operators
+import kiwitorch.operators as operators
 
 A = TypeVar("A")
 
