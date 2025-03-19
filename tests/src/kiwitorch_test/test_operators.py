@@ -22,6 +22,7 @@ from kiwitorch.operators import (
     prod,
     relu,
     relu_back,
+    sigmoid,
 )
 
 from .strategies import assert_close, small_floats
@@ -85,41 +86,40 @@ def test_eq(a: float) -> None:
 def test_sigmoid(a: float) -> None:
     """Check properties of the sigmoid function, specifically
     * It is always between 0.0 and 1.0.
-    * one minus sigmoid is the same as sigmoid of the negative
+    * One minus sigmoid is the same as sigmoid of the negative
     * It crosses 0 at 0.5
-    * It is  strictly increasing.
+    * It is strictly increasing.
     """
-    # TODO: Implement for Task 0.2.
-    raise NotImplementedError("Need to implement for Task 0.2")
+    assert 0.0 <= sigmoid(a) <= 1.0
+    assert_close(1.0 - sigmoid(a), sigmoid(-a))
+    assert sigmoid(0.0) == 0.5
+    assert sigmoid(a) <= sigmoid(a + 1.0)
 
 
 @given(small_floats, small_floats, small_floats)
 def test_transitive(a: float, b: float, c: float) -> None:
     """Test the transitive property of less-than (a < b and b < c implies a < c)"""
-    # TODO: Implement for Task 0.2.
-    raise NotImplementedError("Need to implement for Task 0.2")
+    assert lt(a, c) if lt(a, b) and lt(b, c) else True
 
 
 def test_symmetric() -> None:
     """Write a test that ensures that :func:`kiwitorch.operators.mul` is symmetric, i.e.
     gives the same value regardless of the order of its input.
     """
-    # TODO: Implement for Task 0.2.
-    raise NotImplementedError("Need to implement for Task 0.2")
+    assert_close(mul(2.0, 3.0), mul(3.0, 2.0))
 
 
 def test_distribute() -> None:
     r"""Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
     """
-    # TODO: Implement for Task 0.2.
-    raise NotImplementedError("Need to implement for Task 0.2")
+    assert_close(mul(2.0, add(3.0, 4.0)), add(mul(2.0, 3.0), mul(2.0, 4.0)))
 
 
-def test_other() -> None:
+@given(small_floats, small_floats, small_floats)
+def test_other(a: float, b: float, c: float) -> None:
     """Write a test that ensures some other property holds for your functions."""
-    # TODO: Implement for Task 0.2.
-    raise NotImplementedError("Need to implement for Task 0.2")
+    assert_close(mul(a, add(b, c)), add(mul(a, b), mul(a, c)))
 
 
 @given(small_floats, small_floats, small_floats, small_floats)
@@ -138,8 +138,9 @@ def test_sum_distribute(ls1: list[float], ls2: list[float]) -> None:
     """Write a test that ensures that the sum of `ls1` plus the sum of `ls2`
     is the same as the sum of each element of `ls1` plus each element of `ls2`.
     """
-    # TODO: Implement for Task 0.3.
-    raise NotImplementedError("Need to implement for Task 0.3")
+    assert_close(
+        sum(ls1) + sum(ls2), kiwitorch.operators.sum(ls1) + kiwitorch.operators.sum(ls2)
+    )
 
 
 @given(lists(small_floats))
