@@ -2,7 +2,7 @@
 KiwiTorch - A lightweight deep learning framework
 """
 
-from kiwitorch.module import Module  # noqa: F401,F403
+from kiwitorch.module import Module, Parameter  # noqa: F401,F403
 from kiwitorch.scalar import Scalar  # noqa: F401,F403
 from kiwitorch.tensor import Tensor  # noqa: F401,F403
 
@@ -16,6 +16,7 @@ from kiwitorch.utils import operators as operators  # noqa: F401,F403
 __all__ = [
     "Tensor",
     "Module",
+    "Parameter",
     "Scalar",
     "MathTest",
     "MathTestVariable",

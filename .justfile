@@ -1,4 +1,5 @@
 alias i := install
+alias ip := install-project
 alias r := run
 alias t := test
 alias b := build
@@ -10,6 +11,10 @@ alias ch := check
 install:
   uv sync
   uv run pre-commit install
+
+# Install the project
+install-project:
+  uv pip install -e .
 
 # Run pre-commit
 pre_commit:

@@ -9,12 +9,7 @@ requires-python = ">=3.10"
 readme = "README.md"
 license = { file = "LICENSE" }
 
-dependencies = [
-    "utils",
-    "kiwitorch",
-    "typer>=0.12.5",
-    "hypothesis>=6.129.4",
-]
+dependencies = ["utils", "kiwitorch", "typer>=0.12.5", "hypothesis>=6.129.4"]
 
 [tool.uv.sources]
 utils = { workspace = true }
@@ -73,3 +68,6 @@ extend-exclude = ["__pycache__", "docs", "site", ".tmp"]
 [tool.pytest.ini_options]
 cache_dir = ".pytest_cache"
 pythonpath = [".", "scripts", "src"]
+
+[tool.setuptools]
+package-dir = { "" = "src/kiwitorch/src" }
