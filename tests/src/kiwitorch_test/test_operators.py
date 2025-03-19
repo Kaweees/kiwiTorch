@@ -81,13 +81,6 @@ def test_eq(a: float) -> None:
     assert eq(a, a + 1.0) == 0.0
 
 
-# ## Task 0.2 - Property Testing
-
-# Implement the following property checks
-# that ensure that your operators obey basic
-# mathematical rules.
-
-
 @given(small_floats)
 def test_sigmoid(a: float) -> None:
     """Check properties of the sigmoid function, specifically
@@ -127,12 +120,6 @@ def test_other() -> None:
     """Write a test that ensures some other property holds for your functions."""
     # TODO: Implement for Task 0.2.
     raise NotImplementedError("Need to implement for Task 0.2")
-
-
-# ## Task 0.3  - Higher-order functions
-
-# These tests check that your higher-order functions obey basic
-# properties.
 
 
 @given(small_floats, small_floats, small_floats, small_floats)
